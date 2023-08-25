@@ -2,8 +2,6 @@
 
 The goal of the platform is to increase awareness of gender harassment among youngsters and create an emotional mutual understanding environment.
 
-Project Jira Board
-[https://pmc.cs.uwindsor.ca/jira/browse/CP8117P09](https://pmc.cs.uwindsor.ca/jira/browse/CP8117P09)
 
 
 ## Project Setup
