@@ -8,7 +8,7 @@ The goal of the platform is to increase awareness of gender harassment among you
 
 ```
 npm install -g @ionic/cli cordova-res
-git clone https://<YOUR-USERNAME>.github.com/nischay-dhiman/UwinCare-Frontend.git UwinCare
+git clone <Github Code URL>
 cd uwin-care && npm install && ionic serve
 ```
 
