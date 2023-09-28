@@ -1,6 +1,6 @@
 # UwinCare-Frontend
 
-The goal of the platform is to increase awareness of gender harassment among youngsters and create an emotional mutual understanding environment.
+The goal of this mobile application is to increase awareness of gender harassment among youngsters and create an emotional mutual understanding environment.
 
 
 
