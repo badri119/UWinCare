@@ -2,7 +2,8 @@
 
 
 # Application Screenshots:
-![image](https://github.com/badri119/UWinCare/assets/90651004/90f40765-0104-416d-bc24-23fc2c7d0777)
+![image](https://github.com/badri119/UWinCare/assets/90651004/b78a7975-8aee-4b7a-b30d-05d821c61806)
+
 
 
 
