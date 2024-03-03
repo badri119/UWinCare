@@ -1,7 +1,7 @@
 # UWinCare
 
 
-#Application Screenshots:
+# Application Screenshots:
 ![image](https://github.com/badri119/UWinCare/assets/90651004/90f40765-0104-416d-bc24-23fc2c7d0777)
 
 
