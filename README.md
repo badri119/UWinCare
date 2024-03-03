@@ -1,5 +1,12 @@
 # UWinCare
 
+A mobile application where students can express their feelings without revealing their identity and get advice from professionals who are also on the app. Plus, it's a safe space designed to support students through tough times
+
+# Tech Stack:
+
+ - Frontend: Ionic and SCSS
+ - Backend: Django and Postgres
+
 
 # Application Screenshots:
 ![image](https://github.com/badri119/UWinCare/assets/90651004/b78a7975-8aee-4b7a-b30d-05d821c61806)
