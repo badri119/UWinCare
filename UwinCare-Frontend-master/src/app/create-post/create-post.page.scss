@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+ion-toolbar{
+    --background: var(--ion-color-primary);
+    --ion-background-color:#ffffff;
+    text-align: center;
+}
+
+ion-title{
+    font-size: 5vw;
+    padding-left: 80px;
+}
+
+.how{
+    font-family: 'Open Sans', sans-serif;
+    color:#200dc4   
+    
+}
+.thoughts{
+    color: rgb(143, 138, 138);
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background-color: rgb(255, 255, 255); 
+  }
+
+
+.option1{
+    color:rgb(192, 31, 139);
+    font-family: 'Poppins', sans-serif;
+    
+}
+.option2{
+    color: rgb(170, 18, 175) ;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+.option3{
+    color: rgb(37, 151, 226);
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+.option4{
+    color: rgb(235, 146, 13) ;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.b1{
+    font-weight: bold;
+    font-family: Georgia, serif;
+    background-color: #ffffff;
+    left:7%;
+    width:100px;
+    height:40px;
+    position: absolute;
+    z-index:2; 
+    text-transform: none;
+   
+}
+    
+.b2{
+    font-weight: bold;
+    font-family: Georgia, serif;
+    background-color: #ffffff;
+    left:55%;
+    width:100px;
+    height:40px;
+    position: absolute;
+    z-index:2; 
+    text-transform: none;
+ 
+}

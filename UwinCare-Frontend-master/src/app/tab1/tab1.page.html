@@ -1,17 +1,82 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header mode="ios" translucent="true" collapse="condense">
+  <ion-toolbar translucent>
     <ion-title>
-      Tab 1
+      Posts
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true"  class="container">
+  <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-searchbar class="search" [(ngModel)]="filterTerm" (ionInput)="search($event)" animated="true"></ion-searchbar>
+    <ion-card *ngFor="let post of postList | filter:filterTerm">
+      <!-- <ion-card> -->
+      <ion-card-content class="ion-no-padding">
+        <ion-item lines="none">
+          <ion-button *ngIf= "post.author == this.profileData?.account_id" fill="none" slot="end" (click)="_popOver($event, post.id)">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </ion-button>
+          <ion-avatar slot="start" > 
+            <img class="avatar-image" src="assets/user1.png" alt=""/>
+          </ion-avatar>
+          <ion-label>
+            <h2 class="feeling-style ion-text-capitalize">Feeling {{post.feeling}}</h2> 
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-text-justify" lines="none">
+            <div class="size" auto-grow="true">{{post.message}}</div>
+        </ion-item>
+        <ion-item class="">
+          <span class="postedDate">{{post.created | date: "dd/MMM/yyyy"}}</span>
+          <!-- <ion-chip slot="end" (click)="likePost(post.id)">
+            <ion-icon [name]="heartType" color="dark"></ion-icon>
+            <ion-label style="vertical-align: 10%; padding-right: 4px;">{{post.likes.length}}</ion-label>
+          </ion-chip> -->
+        </ion-item>
+        
+        <!-- <ion-item class="ion-float-right">
+          <ion-icon name="arrow-down"  (click)="showComment(post.id)" ></ion-icon>
+        </ion-item>  -->
+
+        <!-- comment section code starts -->
+        <ion-button class="comment_button" fill="none" slot="end" (click)="showComment(post.id)">
+          <ion-text color="primary" class="ion-float-right"><i>Show/Hide Comments...</i></ion-text>
+        </ion-button>
+        
+        <ion-row *ngFor="let comment of commentList" >
+          <ion-col class="ion-no-padding">
+            <ion-item lines="none" *ngIf= "commentObservable && comment.post_id == post.id">
+                <h6>{{comment.comment_text}}</h6>
+                <ion-button *ngIf= "comment.commentor_id == this.profileData?.account_id || post.author == this.profileData?.account_id" class="comment_button" fill="none" slot="end" (click)="deleteComment(comment.comment_id, post.id)">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </ion-button>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <form [formGroup]="addCommentForm" (ngSubmit)="submitForm()" novalidate>
+
+          <ion-item>
+            <ion-textarea class="ion-no-padding" auto-grow="true" placeholder="Comment here" formControlName="comment_text"></ion-textarea>  
+            <ion-icon item-right name="send" (click)="submitComment(post.id)" style="opacity: 20%"></ion-icon>
+          </ion-item>
+<!--           
+          <ion-item class="ion-no-margin"> 
+              <ion-textarea class="ion-no-padding" auto-grow="true" placeholder="Comment here" formControlName="comment_text"></ion-textarea>  
+          </ion-item>
+          <ion-button class="ion-no-margin" fill="none" slot="end" (click)="submitComment(post.id)">
+            <ion-text color="primary"><i>Comment</i></ion-text>
+          </ion-button>           -->
+        </form>
+        
+
+
+
+
+
+      </ion-card-content>
+    </ion-card>
 </ion-content>

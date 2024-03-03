@@ -1,0 +1,71 @@
+
+<ion-header mode="ios" translucent="true" class="ion-no-border" collapse="condense">
+  <ion-toolbar translucent>
+    <ion-avatar slot="start" style="margin-left: 10px;"> 
+      <img class="ion-padding-left" alt="logo" id="header_logo" height="30" src=".\assets\UwinCare.png">
+    </ion-avatar>
+    <ion-title>My Account</ion-title>
+    <ion-button fill="none" slot="end" (click)="actionSheet()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  
+  <div class="container">
+    <ion-avatar class="profile_avatar">
+      <img src="{{this.profileData?.avatar}}">
+    </ion-avatar>
+  </div>
+
+    <ion-card>
+      <ion-card-content>
+          <ion-label position="floating">Name: {{this.profileData?.account_name}}</ion-label>  
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+          <ion-label position="floating">Email: {{ this.profileData?.email }}</ion-label>  
+      </ion-card-content>
+    </ion-card>
+    
+    <!-- List Header Full Lines -->
+    <!-- <ion-list-header lines="full">
+      <ion-label>All My Post</ion-label>
+    </ion-list-header>
+
+    <ion-card class="post_card">
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-avatar slot="start" > 
+            <img src="assets/user1.png" alt=""/>
+          </ion-avatar>
+          <ion-label>
+            <h2 class="ion-text-capitalize">post</h2>       
+          </ion-label>
+          <ion-button fill="none" slot="end" (click)="_popOver($event)">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item class="ion-text-justify" lines="none">
+          <p> ipsum dolor sit amet consectetur adipisicing elit. Fugiat quos eum laboriosam est ex at itaque quod quas rerum placeat omnis iure nulla aliquid ad, corrupti distinctio natus possimus rem?
+          </p>
+        </ion-item>
+        <ion-item class="ion-text-justify" lines="none" style="height: 30px !important;">
+          <h5>View / Hide Comments</h5>
+        </ion-item>
+        <ion-item>
+          cm1
+        </ion-item>
+        <ion-item>
+          cm1
+        </ion-item>
+
+
+      </ion-card-content>
+    </ion-card> -->
+
+    <!-- <ion-button color="primary" size="full" (click)="logout()">Logout</ion-button> -->
+</ion-content>

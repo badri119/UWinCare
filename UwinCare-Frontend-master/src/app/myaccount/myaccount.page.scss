@@ -1,0 +1,33 @@
+ion-title{
+  padding-left: 80px;
+  padding-right: 30px;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile_avatar {
+  width: 200px !important;
+  height: 200px  !important;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ion-card{
+  width: 93% !important;
+}
+
+.post_card{
+  ion-card-content{
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

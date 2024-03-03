@@ -1,5 +1,7 @@
 {
   "name": "UwinCare",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

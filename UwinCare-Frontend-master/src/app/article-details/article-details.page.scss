@@ -1,0 +1,23 @@
+
+ion-title{
+    font-size: 5vw;
+    padding-left: 80px;
+    padding-right: 30px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ion-back-button {
+    display: block;
+ }
+
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ion-card {
+    box-shadow:none !important
+  }

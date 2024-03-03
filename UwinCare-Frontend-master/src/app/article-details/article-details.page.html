@@ -1,0 +1,38 @@
+<ion-header mode="ios" translucent="true" class="ion-no-border">
+  <ion-toolbar translucent>
+    <ion-buttons slot="start" >
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">{{articleData?.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="container">
+      <img src="{{site_url + articleData?.banner_image}}">
+      <!-- <img src=".\assets\article-01.png"> -->
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize">{{articleData?.title}}</ion-card-title>
+      <ion-card-subtitle>Posted on: {{articleData?.created | date: "dd/MMM/yyyy HH:mm"}}</ion-card-subtitle>
+      <ion-chip (click)="likeArticle(articleData.id)">
+        <ion-icon [name]="heartType" color="dark"></ion-icon>
+        <ion-label style="vertical-align: 10%; padding-right: 4px;">{{articleData?.likes.length}}</ion-label>
+      </ion-chip>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="ion-text-justify"> 
+        {{articleData?.content}}
+        
+      </div>
+    </ion-card-content>
+    
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header mode="ios" translucent="true" class="ion-no-border">
+  <ion-toolbar translucent>
+    <ion-buttons slot="start" >
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Know The Professional </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <div class="container">
+    <ion-avatar>
+      <img src="{{site_url + expertData?.avatar}}">
+    </ion-avatar>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{expertData?.designation}}</ion-card-subtitle>
+      <ion-card-title class="ion-text-capitalize">{{expertData?.name}}</ion-card-title>
+      <a href="{{expertData?.website}}" target="_blank">{{expertData?.website}}</a>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{expertData?.description}}
+    </ion-card-content>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-no-padding">
+        <div>
+          <ion-button class="ion-no-padding" color="primary" size="full" (click)="makeCall(expertData?.phone)">Call</ion-button>
+        </div>
+      </ion-col>
+      <ion-col class="ion-no-padding">
+        <div>
+          <ion-button  fill="outline" size="full">Text</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>

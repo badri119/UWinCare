@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button color="light"
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Share Your Feelings </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-card class="card">
+      <ion-card-content>
+        <ion-text>
+          <h1 class="how">How are you Feeling today?</h1>
+        </ion-text>
+        <br>
+        <ion-text>
+          <h4 class="thoughts"> Share your thoughts with us, it will make you feel better.</h4>
+        </ion-text>
+        <br>
+        <ion-list>
+        <ion-radio-group formControlName="feeling">
+          <ion-item>
+            <ion-label class="option1">A Bit Anxious</ion-label>
+            <ion-radio slot="start" color="danger" value="a bit anxious"></ion-radio>
+          </ion-item>
+        
+            <ion-item>
+              <ion-label class="option2">Quite Stressed</ion-label>
+              <ion-radio slot="start" color="dark" value="quite stressed"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label class="option3">Unhappy</ion-label>
+              <ion-radio slot="start" color="primary" value="unhappy"></ion-radio>
+            </ion-item>
+        
+            <ion-item> 
+              <ion-label class="option4">Fearful</ion-label>
+              <ion-radio slot="start" color="warning" value="write your own"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="card">   
+      <ion-card-content>
+        <ion-item class="color" > 
+            <ion-textarea auto-grow="true" placeholder="Please share your feelings here. It will be an anonymous post" formControlName="message"></ion-textarea>  
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card style="box-shadow:none !important"> 
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-button shape="round" (click)="movetotab1()" class="b1">Not Now</ion-button>
+          <ion-button shape="round" (click)="submitPost()" class="b2">Share</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    
+
+  </form>
+</ion-content>

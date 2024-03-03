@@ -1,0 +1,27 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+ion-button[color="dark"]{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+ion-button[color="primary"]{
+    text-transform: uppercase;
+}
+
+.dot{
+    padding-top: 15px;
+}
+
+img{
+
+    text-align: center;
+    height: 30%;
+    width: 30%;
+    padding-bottom: 35px;
+}
+

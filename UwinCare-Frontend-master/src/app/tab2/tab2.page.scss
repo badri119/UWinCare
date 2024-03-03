@@ -1,0 +1,33 @@
+
+ion-title{
+    font-size: 6vw;
+}
+.postedDate{
+    font-size: 10px;
+}
+
+
+ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0px;
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 0px;
+}
+ion-card{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ion-card-content    {
+    padding: 0px 0px 0px 0px;
+}
+img  {
+    width:100px !important;
+    height: auto !important;
+    margin: 0px 15px 0px 0px;
+}
+
+ion-toolbar{
+    padding-top: 15px;
+}
